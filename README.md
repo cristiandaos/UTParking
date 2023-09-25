@@ -1,2 +1,5 @@
 # parking
-Sistema de parqueo v1.0
+Importar la db a phpMyAdmin para tener acceso al sistema
+/*LOG - IN*/
+username: admin
+password: 123
