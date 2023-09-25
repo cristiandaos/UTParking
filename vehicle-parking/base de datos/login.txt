@@ -1,0 +1,22 @@
+/* DATABASE*/
+
+**Database Name: vehicle-parking-db**
+
+**Developed by @cristiandaos**
+
+*Se recomienda usar PHP v. 5.6 en adelante*
+
+1. Se dirigin a phpMyAdmin por XAMPP
+2. Crean la db con el nombre: vehicle-parking-db
+3. Acceden a la db en phpMyAdmin
+4. En la parte superior les aparecerá la opción de importar, le dan click 
+5. Importar la base de datos "vehicle-parking-db.sql"
+   que se encuentra en esta carpeta, verufucar que en conjunto de caracteres
+   del archivo esté en utf-8
+6. luego deslizan hacia abajo y le dan en importar
+7. ahora si tendrán acceso al sistema de parking para poder loguearse
+
+
+
+
+

@@ -36,6 +36,7 @@ if(isset($_POST['login']))
 <body>
 	<div class="row">
 		<div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+		<center><h2 style="font-size: 40px;"><b style="color: #D01A49;">UTP</b><b>arking</b></h2></center>
 		<center><h2><b>Sistema de parqueo de vehículos</b></h2></center>
 			<div class="login-panel panel panel-default">
 				<div class="panel-heading">Por favor, inicie sesión para continuar</div>

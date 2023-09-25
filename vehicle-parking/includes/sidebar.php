@@ -28,7 +28,6 @@
             <li class="<?php if($page=="out-vehicle") {echo "active";}?>"><a href="out-vehicles.php"><em class="fa fa-toggle-off">&nbsp;</em> Vehículos salientes</a></li>
 			<li class="<?php if($page=="reports") {echo "active";}?>"><a href="reports.php"><em class="fa fa-file">&nbsp;</em> Visualizar reportes</a></li>
 			<!-- <li class="<?php if($page=="about") {echo "active";}?>"><a href="about.php"><em class="fa fa-info">&nbsp;</em> About Page</a></li> -->
-			<li class="<?php if($page=="income") {echo "active";}?>"><a href="total-income.php"><em class="fa fa-dollar">&nbsp;</em> Ingresos totales</a></li>
 			
 		</ul>
 		

@@ -5,7 +5,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="./dashboard.php"><span>UTP</span>arking</a>
+				<a class="navbar-brand" href="./dashboard.php"><span style="color: #D01A49;">UTP</span>arking</a>
 				<ul class="nav navbar-top-links navbar-right">
 					
 						

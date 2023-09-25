@@ -167,7 +167,7 @@ if (strlen($_SESSION['vpmsaid']==0)) {
 	var myChart = new Chart(ctx, {
 	type: 'pie',
 	data: {
-	labels: ["Vehicle In-Time","Vehicle Out-Time"],
+	labels: ["Vehículos entrantes","Vehículos salientes"],
 	datasets: [{
 	backgroundColor: ["#30a5ff","#33cccc"],
 	data: [<?php echo $row5['id1']; ?>,<?php echo $row6['id2']; ?>]
