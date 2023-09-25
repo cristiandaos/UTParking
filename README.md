@@ -1,7 +1,7 @@
 # parking
-Importar la db a phpMyAdmin para tener acceso al sistema
+Crear db con el nombre "vehicle-parking-db", luego importar el archivo: "vehicle-parking-db.sql" a phpMyAdmin para tener acceso al sistema
 
-LOG-IN
+Usuario admin para ingresar al sistema:
 
 username: admin
 
