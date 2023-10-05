@@ -136,7 +136,7 @@ if (strlen($_SESSION['vpmsaid']==0)) {
 		$ret=mysqli_query($con,"SELECT count(ID) as id2 from vehicle_info where VehicleCategory='Moto'");
 		$row2=mysqli_fetch_array($ret); 
 
-		$ret=mysqli_query($con,"SELECT count(ID) as id4 from vehicle_info where VehicleCategory='Bicicleta'");
+		$ret=mysqli_query($con,"SELECT count(ID) as id4 from vehicle_info where VehicleCategory='Otros'");
 		$row4=mysqli_fetch_array($ret);
 		
 		?>
@@ -179,7 +179,7 @@ if (strlen($_SESSION['vpmsaid']==0)) {
 	var myChart = new Chart(ctx, {
 	type: 'pie',
 	data: {
-	labels: ["Auto","Moto", "Bicicleta"],
+	labels: ["Auto","Moto", "Otros"],
 	datasets: [{
 	backgroundColor: ["#f55d42","#f5c542", "#6b6b6b"],
 	data: [<?php echo $row['id1']; ?>,

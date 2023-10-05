@@ -9,7 +9,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Imprimir - UTParking</title>
+	<title>Comprobante de salida - UTParking</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/datatable.css" rel="stylesheet">
@@ -27,7 +27,7 @@
 		<div class="row">
 			
 		</div><!--/.row-->
-		<a href="out-vehicles.php"><button class="btn btn-primary">Back</button></a>
+		<a href="out-vehicles.php"><button class="btn btn-primary">Volver</button></a>
 		<?php
         $cid=$_GET['vid'];
         $ret=mysqli_query($con,"SELECT * from vehicle_info where ID='$cid'");
@@ -38,62 +38,62 @@
                 <div  id="exampl">
       <table id="dom-jqry" class="table table-striped table-bordered">
         <tr>
-          <th colspan="4" style="text-align: center; font-size:22px;"> Vehicle Parking System Receipt</th>
+          <th colspan="4" style="text-align: center; font-size:22px;"> Sistema de reserva de parqueo - <b style="color: #D01A49;">UTP</b><b>arking</b></h2></th>
         </tr>
 
         <tr>
 
-        <th>Registration Number</th>
+        <th>Placa de vehículo</th>
               <td><?php  echo $row['RegistrationNumber'];?></td>
                        
 
-          <th>Vehicle Category</th>
+          <th>Categoría de vehículo</th>
               <td><?php  echo $row['VehicleCategory'];?></td>
               </tr>
 
               <tr>
-          <th>Vehicle Company</th>
+          <th>Marca de vehículo</th>
               <td><?php  echo $packprice= $row['VehicleCompanyname'];?></td>
         
-          <th>Parking Number</th>
+          <th>Número de parqueo</th>
               <td><?php  echo 'CA-'.$row['ParkingNumber'];?></td>
               </tr>
 
               <tr>
-              <th>Owner Name</th>
+              <th>Dueño del vehículo</th>
                 <td><?php  echo $row['OwnerName'];?></td>
             
-                  <th>Owner Contact Number</th>
+                  <th>Número de contacto</th>
                   <td><?php  echo $row['OwnerContactNumber'];?></td>
               </tr>
 
               <tr>
-          <th>Vehicle In-Time</th>
+          <th>Fecha y hora de entrada</th>
           <td><?php  echo $row['InTime'];?></td>
 
-          <th>Current Status</th>
+          <th>Estado</th>
           <td> 
             <?php  
             if($row['Status']==""){
-              echo "Incoming Vehicle";
+              echo "Vehículo entrante";
             }
             if($row['Status']=="Out"){
-              echo "Outgoing Vehicle";
+              echo "Vehículo saliente";
             } ;
             ?>
           </td>
       </tr>
       <?php if($row['Remark']!=""){ ?>
       <tr>
-        <th>Vehicle Out-Time</th>
+        <th>Fecha y hora de salida</th>
         <td><?php  echo $row['OutTime'];?></td>
 
-        <th>Total Charge</th>
+        <th>Carga total</th>
         <td><?php  echo "$ ", $row['ParkingCharge'];?></td>
       </tr>
 
       <tr>
-        <th>Remarks</th>
+        <th>Especificaciones del vehículo</th>
         <td colspan="3"><?php  echo  $row['Remark'];?></td> 
       </tr>
 

@@ -61,7 +61,7 @@
                 <th>Marca</th>
                 <th>Categoría</th>
                 <th>Número de parqueo</th>
-				<th>charge</th>
+				<th>Carga total</th>
                 <th>Dueño del vehículo</th>
                 <th></th>
 
@@ -92,7 +92,7 @@
 
             <td><?php  echo $row['OwnerName'];?></td>
             
-            <td><a href="outgoing-detail.php?updateid=<?php echo $row['ID'];?>"><button type="button" class="btn btn-sm btn-info">View Details</button></a>
+            <td><a href="outgoing-detail.php?updateid=<?php echo $row['ID'];?>"><button type="button" class="btn btn-sm btn-info">Ver detalles</button></a>
             <a href="print-receipt.php?vid=<?php echo $row['ID'];?>"><button type="button" class="btn btn-sm btn-warning"> <i class="fa fa-print"></i></button>
             </td>
 

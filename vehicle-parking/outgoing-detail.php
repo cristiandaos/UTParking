@@ -92,61 +92,61 @@
                             ?> 
 
 								<div class="form-group">
-									<label>Vehicle Registration Number</label>
+									<label>Placa de vehículo</label>
 									<input type="text" class="form-control" value="<?php  echo $row['RegistrationNumber'];?>" id="catename" name="catename" readonly>
 								</div>
 
 
 								<div class="form-group">
-									<label>Company Name</label>
+									<label>Marca de vehículo</label>
 									<input type="text" class="form-control" value="<?php  echo $row['VehicleCompanyname'];?>" id="sdesc" name="sdesc" readonly>
 								</div>
 
 
                                 <div class="form-group">
-									<label>Category</label>
+									<label>Categoría de vehículo</label>
 									<input type="text" class="form-control" value="<?php  echo $row['VehicleCategory'];?>" id="sdesc" name="sdesc" readonly>
 								</div>
 
 
                                 <div class="form-group">
-									<label>Parking Number</label>
+									<label>Número de parqueo</label>
 									<input type="text" class="form-control" value="<?php  echo $row['ParkingNumber'];?>" id="sdesc" name="sdesc" readonly>
 								</div>
 
 
                                 <div class="form-group">
-									<label>Vehicle IN Time</label>
+									<label>Fecha y hora de entrada</label>
 									<input type="text" class="form-control" value="<?php  echo $row['InTime'];?>" id="sdesc" name="sdesc" readonly>
 								</div>
 
 
                                 <div class="form-group">
-									<label>Vehicle OUT Time</label>
+									<label>Fecha y hora de salida</label>
 									<input type="text" class="form-control" value="<?php  echo $row['OutTime'];?>" id="sdesc" name="sdesc" readonly>
 								</div>
 
 
                                 <div class="form-group">
-									<label>Vehicle Owned By</label>
+									<label>Dueño del vehículo</label>
 									<input type="text" class="form-control" value="<?php  echo $row['OwnerName'];?>" id="sdesc" name="sdesc" readonly>
 								</div>
 
 
                                 <div class="form-group">
-									<label>Vehicle Owner Contact</label>
+									<label>Número de contacto</label>
 									<input type="text" class="form-control" value="<?php  echo $row['OwnerContactNumber'];?>" id="sdesc" name="sdesc" readonly>
 								</div>
 
 
                                 <div class="form-group">
-									<label>Current Status</label>
-									<input type="text" class="form-control" value="<?php if($row['Status']==""){ echo "Vehicle In"; } if($row['Status']=="Out"){echo "Vehicle out";} ;?>" id="sdesc" name="sdesc" readonly>
+									<label>Estado</label>
+									<input type="text" class="form-control" value="<?php if($row['Status']==""){ echo "Vehículo entrante"; } if($row['Status']=="Out"){echo "Vehículo saliente";} ;?>" id="sdesc" name="sdesc" readonly>
 								</div>
 
 
                                 <div class="form-group">
-									<label>Total Charge</label>
+									<label>Carga total</label>
 									<input type="text" class="form-control" value="$ <?php  echo $row['ParkingCharge'];?>" id="parkingcharge" name="parkingcharge" readonly>
 								</div>
 
@@ -158,7 +158,7 @@
 
 
                                 <div class="form-group">
-									<label>Remarks</label>
+									<label>Especificaciones del vehículo</label>
 									<input type="text" class="form-control" value="<?php  echo $row['Remark'];?>" id="remark" name="remark" readonly>
 								</div>
 								

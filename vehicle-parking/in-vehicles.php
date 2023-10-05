@@ -88,7 +88,7 @@
 
             <td><?php  echo $row['OwnerName'];?></td>
             
-            <td><a href="update-incomingdetail.php?updateid=<?php echo $row['ID'];?>"><button type="button" class="btn btn-sm btn-danger">Take Action</button></a>
+            <td><a href="update-incomingdetail.php?updateid=<?php echo $row['ID'];?>"><button type="button" class="btn btn-sm btn-danger">Tomar acción</button></a>
             </td>
 
             </tr>
