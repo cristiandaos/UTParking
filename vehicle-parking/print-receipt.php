@@ -75,11 +75,15 @@
           <td> 
             <?php  
             if($row['Status']==""){
-              echo "Vehículo entrante";
+              echo "En cola";
+            }
+            //EN COLA - EDIT
+            if($row['Status']=="On"){
+              echo "Estacionado";
             }
             if($row['Status']=="Out"){
               echo "Vehículo saliente";
-            } ;
+            }
             ?>
           </td>
       </tr>
@@ -88,9 +92,6 @@
         <th>Fecha y hora de salida</th>
         <td><?php  echo $row['OutTime'];?></td>
 
-        <th>Carga total</th>
-        <td><?php  echo "$ ", $row['ParkingCharge'];?></td>
-      </tr>
 
       <tr>
         <th>Especificaciones del vehículo</th>

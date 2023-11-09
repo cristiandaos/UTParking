@@ -146,12 +146,6 @@
 
 
                                 <div class="form-group">
-									<label>Carga total</label>
-									<input type="text" class="form-control" value="$ <?php  echo $row['ParkingCharge'];?>" id="parkingcharge" name="parkingcharge" readonly>
-								</div>
-
-
-                                <div class="form-group">
 									<label>Status</label>
 									<input type="text" name="status" value="<?php echo $row['Status']; ?>" class="form-control" readonly>
 								</div>

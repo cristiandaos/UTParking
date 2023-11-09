@@ -12,7 +12,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Vehículos salientes - UTParking</title>
+	<title>Vehículos parqueados - UTParking</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/datatable.css" rel="stylesheet">
@@ -27,7 +27,7 @@
         <?php include 'includes/navigation.php' ?>
 	
 		<?php
-		$page="out-vehicle";
+		$page="parking";
 		include 'includes/sidebar.php'
 		?>
 		
@@ -37,7 +37,7 @@
 				<li><a href="dashboard.php">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Gestión de vehículos salientes</li>
+				<li class="active">Gestión de vehículos entrantes</li>
 			</ol>
 		</div><!--/.row-->
 		
@@ -50,15 +50,14 @@
 		<div class="row">
 				<div class="col-lg-12">
 					<div class="panel panel-default">
-						<div class="panel-heading">Vehículos salientes</div>
+						<div class="panel-heading">Vehículos entrantes</div>
 						<div class="panel-body">
                         <table id="example" class="table table-striped table-hover table-bordered" style="width:100%">
                         
         <thead>
-		<tr>
+            <tr>
                 <th>#</th>
                 <th>Placa</th>
-                <th>Marca</th>
                 <th>Categoría</th>
                 <th>Número de parqueo</th>
                 <th>Dueño del vehículo</th>
@@ -68,8 +67,7 @@
         </thead>
         <tbody>
         <?php
-        // $cid=$_GET['viewid'];
-        $ret=mysqli_query($con,"SELECT * from  vehicle_info where Status='Out'");
+        $ret=mysqli_query($con,"SELECT * FROM vehicle_info WHERE Status='On' ORDER BY InTime DESC");
         $cnt=1;
         while ($row=mysqli_fetch_array($ret)) {
 
@@ -81,19 +79,16 @@
                  
             <td><?php  echo $row['RegistrationNumber'];?></td>
 
-            <td><?php  echo $row['VehicleCompanyname'];?></td>
+
 
             <td><?php  echo $row['VehicleCategory'];?></td>
 
             <td><?php  echo 'CA-'.$row['ParkingNumber'];?></td>
 
-
             <td><?php  echo $row['OwnerName'];?></td>
-            
-            <td><a href="outgoing-detail.php?updateid=<?php echo $row['ID'];?>"><button type="button" class="btn btn-sm btn-info">Ver detalles</button></a>
-            <a href="print-receipt.php?vid=<?php echo $row['ID'];?>"><button type="button" class="btn btn-sm btn-warning"> <i class="fa fa-print"></i></button>
+			<!--EN CASO SEA 0 : ADMIN, SE PUEDE MODIFICAR, SINO, SOLO QUE DIGA, "PARQUEADO" -->
+            <td><a href="update-incomingdetail.php?updateid=<?php echo $row['ID'];?>"><button type="button" class="btn btn-sm btn-danger">Tomar acción</button></a>
             </td>
-
             </tr>
 
                 <?php $cnt=$cnt+1;}?>

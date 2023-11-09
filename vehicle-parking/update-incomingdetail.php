@@ -135,19 +135,16 @@
 
                                 <div class="form-group">
 									<label>Estado actual</label>
-									<input type="text" class="form-control" value="<?php if($row['Status']==""){ echo "Vehículo entrante"; } if($row['Status']=="Out"){echo "Vehículo saliente";} ;?>" id="sdesc" name="sdesc" readonly>
-								</div>
-
-
-                                <div class="form-group">
-									<label>Carga total</label>
-									<input type="number" class="form-control" placeholder="" id="parkingcharge" name="parkingcharge" required>
+									<!-- EDIT -->
+									<input type="text" class="form-control" value="<?php if($row['Status']==""){ echo "En cola"; } if($row['Status']=="On"){echo "Parqueado"; } if($row['Status']=="Out"){echo "Vehículo saliente";} ;?>" id="sdesc" name="sdesc" readonly>
 								</div>
 
 
                                 <div class="form-group">
 									<label>Estado</label>
 									<select name="status" class="form-control" required="true" >
+										<option value="">En Cola</option>
+										<option value="On">Parqueado</option>
                                         <option value="Out">Vehículo saliente</option>
                                     </select>
 								</div>

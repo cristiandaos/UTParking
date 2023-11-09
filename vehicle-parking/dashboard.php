@@ -64,8 +64,20 @@ if (strlen($_SESSION['vpmsaid']==0)) {
 						<div class="row no-padding"><em class="fa fa-xl fa-toggle-on color-orange"></em>
 							<div class="large"><?php include 'counters/invehicles-count.php'?></div>
 							<div class="text-muted">Vehículos entrantes</div>
+						<div><?php       if($espacio_disponible == 0){
+									echo '<div class="alert alert-danger" role="alert">
+									<b>Parking lleno, no hay espacio disponible</b>
+									</div>';
+								}elseif($espacio_disponible <= 20){
+									echo '<div class="alert alert-danger" role="alert" >
+									Últimos espacios disponibles: '.($espacio_disponible).'
+									</div>';
+								}else{
+									// no muestra nada
+								}?></div>
 						</div>
 					</div>
+					
 				</div>
 				<div class="col-xs-6 col-md-3 col-lg-3 no-padding">
 					<div class="panel panel-orange panel-widget border-right">
@@ -79,7 +91,7 @@ if (strlen($_SESSION['vpmsaid']==0)) {
 					<div class="panel panel-red panel-widget ">
 						<div class="row no-padding"><em class="fa fa-xl fa-clock-o color-red"></em>
 							<div class="large"><?php include 'counters/current-parkingCount.php'?></div>
-							 <div class="text-muted">Parqueado dentro de las 24 hrs</div>
+							 <div class="text-muted">Parqueado en las 24 hrs</div>
 						</div>
 					</div>
 				</div>
